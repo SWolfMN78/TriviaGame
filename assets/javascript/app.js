@@ -4,10 +4,10 @@ var wrongAnswers = 0; // total incorrect answers
 var timedOut = 0; // total time expired count
 var gameClock;
 var gameQuestion;
-var gameAnswer1 = $("#iLblAnswer1").text("");
-var gameAnswer2;
-var gameAnswer3;
-var gameAnswer4;
+var gameAnswer1 = $("#iLblAnswer1").text("Random asnwer text here");
+var gameAnswer2 = $("#iLblAnswer2").text("Random asnwer text here");
+var gameAnswer3 = $("#iLblAnswer3").text("Random asnwer text here");
+var gameAnswer4 = $("#iLblAnswer4").text("Random asnwer text here");
 
 	// On game load show a opener screen where the user can either click "Start area" OR hit enter - display rules
 	/*code to start the game*/
