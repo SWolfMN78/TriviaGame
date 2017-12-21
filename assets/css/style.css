@@ -43,10 +43,10 @@ label{ /* Set up the display information for the different answers */
 }
 
 .cUserAnswerBox{
-	width: 200px; /* Set a width if you like */
+	margin-right: auto;
+	margin-left: auto;
+	width: auto; /* Set a width if you like */
 	border: 1px solid black; /* ****Place Holder...**** */
-	background-position: center;
-	margin: 10px;
 	padding: 1px;
 }
 .cUserAnswerBox label{
@@ -54,6 +54,7 @@ label{ /* Set up the display information for the different answers */
     color: black; /* Black text color */
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
+    font-size: 12pt;
     
 }
 .cUserAnswerBox label:hover{
