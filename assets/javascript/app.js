@@ -6,6 +6,7 @@ var gameClock = 30;  // game start @ 30secs (30,000)
 var clockIntervalID;
 var questionItem = [];
 var gameQuestion;
+var allTrue;
 var gameAnswer1 = $("#iLblAnswer1").text("Random asnwer text here");
 var gameAnswer2 = $("#iLblAnswer2").text("Random asnwer text here");
 var gameAnswer3 = $("#iLblAnswer3").text("Random asnwer text here");
@@ -84,6 +85,7 @@ var inGameAndInf = [ /*Array to hold all the required information. Once answered
 		runClock();
 		//check to see how the player did and log their totals to wins/losses/timeout (draws).
 		winDrawLossCheck();
+		endGame() //check to see if al games show true - build in ending code to take to last screen.
 		
 
 		// $.each(inGameAndInf, function(i){
@@ -116,6 +118,7 @@ var inGameAndInf = [ /*Array to hold all the required information. Once answered
 		gameQuestion = questionItem.question; //item holding the possible answers
 		gameAnswerItm = questionItem.possibleAnswers; //item of the possible answers and push into a solid item
 		gameValidAns = questionItem.goodAnswer //store the correct answer
+		allTrue = questionItem.questionAsked;
 
 		$("#iTxtQuestion").text(gameQuestion); //tell the lable to take in this text and display it.
 
@@ -133,15 +136,16 @@ var inGameAndInf = [ /*Array to hold all the required information. Once answered
 		$("#iLblAnswer3").text(gameAnswerItm[2]);
 		$("#iLblAnswer4").text(gameAnswerItm[3]);
 		 // set the boolean to T = true means it's answers and should not be asked again.
-		 questionItem.questionAsked = true;
+		 allTrue = true;
 
 		
 
 		};
 
 	function winDrawLossCheck(){
-		 //check each answer for the correct answer or if the timer timed out.
+		/*check each answer for the correct answer or if the timer timed out.*/
 		$(".cUserAnswer1").click(function(){
+			//pull the value of what the user guessed out
 			var userGuess = $(this).text(); //pull the value of what the user guessed out
 			if(userGuess === gameValidAns) { //compare the information of what was guessed to the correct answer.
 				correctAnswers += 1;
@@ -155,8 +159,13 @@ var inGameAndInf = [ /*Array to hold all the required information. Once answered
 				alert("That is not the correct answer. You actually want " + gameValidAns + ".");
 				questionAndAnswers(); //load the next question
 				gameClock = 31; //put on an extra second so that the clock reads correctly.
+			return;
 			}
-		})
+		});
+	}
+
+	function endGame() {
+		
 	}
 
 	function runClock(){

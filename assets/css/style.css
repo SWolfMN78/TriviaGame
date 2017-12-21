@@ -41,7 +41,6 @@ label{ /* Set up the display information for the different answers */
 	margin: 10px;
 	border: 1px solid black; /* ****Place Holder...**** */
 }
-
 .cUserAnswerBox{
 	margin-right: auto;
 	margin-left: auto;
@@ -55,7 +54,6 @@ label{ /* Set up the display information for the different answers */
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
     font-size: 12pt;
-    
 }
 .cUserAnswerBox label:hover{
 	background-color: #ccc; /* adjust the color when mosed over*/
@@ -63,4 +61,35 @@ label{ /* Set up the display information for the different answers */
 .cUserAnswerBox label:active{
     background-color: #4CAF50; /* Add a green color to the "active/current" link */
     color: white;
+}
+
+    									/* Game over CSS starts here */ 
+.cInfoDisplay{
+	text-decoration: underline;
+	padding: 15px;
+	margin: 10px;
+	border: 1px solid black; /* ****Place Holder...**** */
+	font-size: 20pt;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.cGameResults{
+	margin-right: auto;
+	margin-left: auto;
+	width: auto; /* Set a width if you like */
+	border: 1px solid black; /* ****Place Holder...**** */
+	padding: 1px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.cGameResults label{
+	background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    font-size: 12pt;
+}
+.cGameResultsStats{
+	font-weight: bold;
+}
+.iCorrectCount{
+	font-weight: normal;
 }
